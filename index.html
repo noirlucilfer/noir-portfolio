@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIR — Portfolio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#000; color:#e8e8e8; font-family:"Courier New",monospace; overflow-x:hidden;
+    background-image: radial-gradient(white 1px, transparent 1px); background-size: 60px 60px; }
+  a { color:#00ffff; }
+  .chrome { background: linear-gradient(180deg,#fff 0%,#9fd8ff 20%,#2a2a2a 45%,#000 50%,#555 55%,#cfeaff 80%,#fff 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    font-family:"Arial Black",Arial,sans-serif; letter-spacing:4px; }
+  header { border-bottom:2px solid #00ffff; padding:12px 20px; display:flex; justify-content:space-between; align-items:center;
+    background:rgba(0,0,0,.85); position:sticky; top:0; z-index:10; }
+  header nav a { margin:0 10px; text-decoration:none; font-size:14px; border:1px solid #ff00ff; padding:4px 10px; color:#ff00ff; }
+  header nav a:hover { background:#ff00ff; color:#000; }
+  .hero { text-align:center; padding:90px 20px 60px; }
+  .hero h1 { font-size:clamp(60px,14vw,160px); }
+  .hero p { color:#ff00ff; margin-top:10px; letter-spacing:3px; }
+  .badge { display:inline-block; border:2px outset #00ffff; padding:6px 14px; margin:8px; font-size:12px; color:#00ffff; background:#001111; }
+  marquee { background:#ff00ff; color:#000; font-weight:bold; padding:8px; border-top:2px solid #000; border-bottom:2px solid #000; }
+  section { max-width:900px; margin:40px auto; padding:20px; border:1px dashed #00ffff; background:rgba(0,0,0,.8); }
+  section h2 { color:#00ffff; letter-spacing:4px; margin-bottom:16px; font-size:22px; }
+  section h2::before { content:"★ "; color:#ff00ff; } section h2::after { content:" ★"; color:#ff00ff; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .card { border:2px outset #888; background:linear-gradient(180deg,#111,#000); padding:16px; }
+  .card .thumb { height:120px; background:linear-gradient(135deg,#ff00ff,#00ffff); margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:40px; }
+  .card h3 { color:#ff00ff; margin-bottom:6px; }
+  .btn { display:inline-block; margin-top:20px; padding:12px 28px; font-weight:bold; text-decoration:none;
+    color:#000; background:linear-gradient(180deg,#fff,#00ffff); border:3px outset #fff; }
+  .btn:hover { background:linear-gradient(180deg,#ff00ff,#ff99ff); }
+  footer { text-align:center; padding:30px; color:#666; font-size:12px; border-top:1px solid #333; }
+  .blink { animation:blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+</style>
+</head>
+<body>
+<header>
+  <div><b style="color:#ff00ff">✦ NOIR.EXE</b></div>
+  <nav><a href="#about">ABOUT</a><a href="#works">WORKS</a><a href="#contact">CONTACT</a></nav>
+</header>
+<div class="hero">
+  <div class="badge">✧ EST. 2000 ✧</div><div class="badge">BEST VIEWED 800x600</div>
+  <h1 class="chrome">NOIR</h1>
+  <p>◤ DIGITAL DESIGNER &amp; CREATIVE DEVELOPER ◥</p>
+  <p class="blink" style="color:#00ffff;margin-top:20px">▼ SCROLL FOR MORE ▼</p>
+</div>
+<marquee>★ WELCOME TO MY CYBERSPACE ★ OPEN FOR FREELANCE ★ HTML ★ CSS ★ JS ★ Y2K AESTHETIC ★</marquee>
+<section id="about">
+  <h2>ABOUT_ME.TXT</h2>
+  <p>Halo! Saya <b style="color:#ff00ff">Noir</b> — desainer & developer yang terobsesi dengan estetika awal 2000-an: chrome text, pixel, marquee, dan neon. Saya bikin website yang nostalgic tapi tetap modern dan cepat.</p>
+  <br><p style="color:#00ffff">> skills: HTML/CSS/JS, UI Design, Motion, Branding_</p>
+</section>
+<section id="works">
+  <h2>SELECTED_WORKS</h2>
+  <div class="grid">
+    <div class="card"><div class="thumb">💿</div><h3>Chrome Dreams</h3><p>Landing page Y2K untuk brand fashion.</p></div>
+    <div class="card"><div class="thumb">🛸</div><h3>Neon Portfolio</h3><p>Portfolio interaktif dengan efek glow.</p></div>
+    <div class="card"><div class="thumb">📼</div><h3>Retro Shop</h3><p>E-commerce gaya retro-futuristik.</p></div>
+    <div class="card"><div class="thumb">👾</div><h3>Pixel Game UI</h3><p>UI/UX untuk game indie.</p></div>
+  </div>
+</section>
+<section id="contact">
+  <h2>CONTACT</h2>
+  <p>Tertarik kerja sama? Klik tombol di bawah untuk menghubungi saya via email:</p>
+  <a class="btn" href="mailto:dev@noirlucilfer.com">✉ dev@noirlucilfer.com</a>
+  <p style="margin-top:16px;font-size:13px;color:#888">atau kirim email manual ke: <span style="color:#00ffff">dev@noirlucilfer.com</span></p>
+</section>
+<footer>
+  © 2000-2026 NOIR ✧ made with nostalgia ✧ <span id="counter"></span>
+  <script>document.getElementById('counter').textContent='visitor #'+String(Math.floor(Math.random()*90000+10000));</script>
+</footer>
+</body>
+</html>
